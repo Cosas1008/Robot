@@ -5,11 +5,11 @@ public class JavaRobot {
 	RobotAngle targetAngle; 
 	// Constructor with no value
 	public JavaRobot() {
-		this.targetAngle = new RobotAngle(0.0,0.0);
+		this.targetAngle = new RobotAngle(0,0);
 		this.setReady(true);
 	}
 	// Constructor with theta and phi
-	public JavaRobot(double theta_in, double phi_in) {
+	public JavaRobot(int theta_in, int phi_in) {
 		this.targetAngle = new RobotAngle(theta_in,phi_in);
 		this.setReady(true);
 	}
@@ -20,7 +20,7 @@ public class JavaRobot {
 	}
 	
 
-	public void moveTo(double theta, double phi) {
+	public void moveTo(int theta, int phi) {
 		this.setReady(false);
 		targetAngle.setTheta(theta);
 		targetAngle.setPhi(phi);
@@ -34,27 +34,27 @@ public class JavaRobot {
 	//contains yaw and pitch
 	class RobotAngle{
 
-		private double theta;
-		private double phi;
+		private int theta;
+		private int phi;
 		
-		RobotAngle(double theta, double phi){
+		RobotAngle(int theta, int phi){
 			this.theta=theta;
 			this.phi=phi;
 		}
 		// basic void function set and get angle
-		public void setTheta(double angle) {
+		public void setTheta(int angle) {
 			this.theta = angle;
 		}
 
-		public void setPhi(double angle) {
+		public void setPhi(int angle) {
 			this.phi = angle;
 		}
 
-		public double getTheta() {
+		public int getTheta() {
 			return this.theta;
 		}
 
-		public double getPhi() {
+		public int getPhi() {
 			return this.phi;
 		}
 
@@ -63,26 +63,26 @@ public class JavaRobot {
 	//Inner class of Robot Position
 	//contains X, Y and Z 
 	class RobotPosition{
-		private double X;
-		private double Y;
-		private double Z;
-		private double[] robotposi = new double[3];
-		RobotPosition(double X, double Y, double Z){
+		private int X;
+		private int Y;
+		private int Z;
+		private int[] robotposi = new int[3];
+		RobotPosition(int X, int Y, int Z){
 			this.X = X;
 			this.Y = Y;
 			this.Z = Z;
 		}
 		//basic void to set and get position
-		public void setX(double position){
+		public void setX(int position){
 			this.X = position;
 		}
-		public void setY(double position){
+		public void setY(int position){
 			this.Y = position;
 		}
-		public void setZ(double position){
+		public void setZ(int position){
 			this.Z = position;
 		}
-		public double[] getPosition(){
+		public int[] getPosition(){
 			this.robotposi[1] = X;
 			this.robotposi[2] = Y;
 			this.robotposi[3] = Z;
