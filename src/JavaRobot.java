@@ -22,8 +22,8 @@ public class JavaRobot {
 
 	public void moveTo(int theta, int phi) {
 		this.setReady(false);
-		targetAngle.setTheta(theta);
-		targetAngle.setPhi(phi);
+		targetAngle.setTheta(theta);	//yaw
+		targetAngle.setPhi(phi);		//pitch
 	}
 
 	public Boolean isCloseTo(RobotAngle otherAngle) {

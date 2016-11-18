@@ -14,7 +14,7 @@ public class RobotNov4 implements Callable<byte[]> {
 		// ====================main function here==================
 		//
 		JavaRobot robot = new JavaRobot();// Angels type variable		
-		robot.moveTo(0.0,100.0);
+		robot.moveTo(0,10);
 		
 	}
 	
