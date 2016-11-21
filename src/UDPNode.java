@@ -6,10 +6,10 @@ import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
 
 public class UDPNode {
-	String host = "192.168.1.130"; // Robot IPAddress
+	String host = "localhost"; // Robot IPAddress
 	private int port = 7000; // Computer's Port
 	private int robotPort = 10040; // Robot's Port
-	private int timeOut = 1000;
+	private int timeOut = 1000;		//Default 1 second
 	int MAX_BUFFER_LENGTH = 256;
 	byte[] robotCommand = new byte[MAX_BUFFER_LENGTH]; // Sending command
 	byte[] receiveData = new byte[MAX_BUFFER_LENGTH]; // Received buffer package

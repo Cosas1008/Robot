@@ -1,5 +1,5 @@
 
-public class JavaRobot {
+public class JavaRobot extends SendUDP{
 
 	Boolean botReady = false;
 	RobotAngle targetAngle; 
@@ -7,6 +7,7 @@ public class JavaRobot {
 	public JavaRobot() {
 		this.targetAngle = new RobotAngle(0,0);
 		this.setReady(true);
+		RobotReadPosition read= new RobotReadPosition();
 	}
 	// Constructor with theta and phi
 	public JavaRobot(int theta_in, int phi_in) {
@@ -20,7 +21,7 @@ public class JavaRobot {
 	}
 	
 
-	public void moveTo(int theta, int phi) {
+	public void moveTo(int theta, int phi){
 		this.setReady(false);
 		targetAngle.setTheta(theta);	//yaw
 		targetAngle.setPhi(phi);		//pitch
