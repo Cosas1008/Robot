@@ -11,7 +11,7 @@ public class UDPNode {
 	private int robotPort = 10040; // Robot's Port
 	private int timeOut = 1000;
 	int MAX_BUFFER_LENGTH = 256;
-	byte[] robotCommand = new byte[256]; // Sending command
+	byte[] robotCommand = new byte[MAX_BUFFER_LENGTH]; // Sending command
 	byte[] receiveData = new byte[MAX_BUFFER_LENGTH]; // Received buffer package
 														// of data
 	InetAddress robotAddress;

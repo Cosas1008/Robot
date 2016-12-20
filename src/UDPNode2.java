@@ -15,7 +15,7 @@ public class UDPNode2 {
 	InetAddress robotAddress;
 	//Add the static Socket object?
 	
-	
+	//Modified on 18th, Nov, 2016
 	//constructor
 	public UDPNode2(int port, int timeOut, byte[] robotCommand) {
 		this.port = port;
