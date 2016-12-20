@@ -12,6 +12,9 @@ public class SendUDP {
 	// static String[] toolPosition = null;// Tool number ,Form ,X ,Y ,Z ,Xr ,Yr
 	// ,Zr
 
+	//Note : 
+	//Create the construction to replace this static void main later the Beta version
+	
 	public static void main(String args[]) throws Exception {
 		int[] valueofInt;
 
@@ -67,5 +70,10 @@ public class SendUDP {
 		}
 
 		return transfered;
+	}
+
+	public void command(byte[] command2) {
+	    //to send the command here
+	    
 	}
 }
